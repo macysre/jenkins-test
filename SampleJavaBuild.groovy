@@ -7,8 +7,6 @@ node {
 
     stage('Build') {
         withMaven() {
-            maven: 'M3',
-            mavenSettingsConfig: 'my-maven-settings',
             mavenLocalRepo: '.repository') {
                 sh 'mvn clean install'
             }
