@@ -8,6 +8,6 @@ node {
         sh "echo 'Hello Mani!!'"
     }
     stage('Promote') {
-        sh 'echo "Prmoting..."'
+        sh 'echo "Prmoting... "'
     }
 }
