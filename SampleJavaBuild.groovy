@@ -7,9 +7,7 @@ node {
 
     stage('Build') {
         withMaven() {
-            mavenLocalRepo: '.repository') {
-                sh 'mvn clean install'
-            }
+            sh "mvn package"
         }
     }
 }
