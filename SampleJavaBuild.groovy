@@ -7,7 +7,11 @@ node {
 
     stage('Build') {
         withMaven {
-            sh 'mvn clean install'
+            maven: 'M3',
+            mavenSettingsConfig: 'my-maven-settings',
+            mavenLocalRepo: '.repository') {
+                sh 'mvn clean install'
+            }
         }
     }
 }
